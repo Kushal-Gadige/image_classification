@@ -9,7 +9,7 @@ from tensorflow import keras
 
 
 
-app = Flask(__name__)
+application = app = Flask(__name__)
 UPLOAD_FOLDER = "/Users/KUSHAL GADIGE/Desktop/Project1/static"
 
 
