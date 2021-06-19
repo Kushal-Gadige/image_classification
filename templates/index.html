@@ -1,0 +1,15 @@
+<!doctype html>
+    <title>Image Classification</title>
+    <h1>Upload File to Predict Dog vs Cat</h1>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=image>
+      <input type=submit value=Predict>
+      <br>
+      {% if image_loc %}
+        <br>
+        <img src="static/{{image_loc}}" alt="" width="256" height="256">
+        <h3>Prediction: {{prediction}}</h3>
+      {% endif %}
+      <br>
+      <h4>Note: This model predicts Dog and Cat</h4>
+    </form>
