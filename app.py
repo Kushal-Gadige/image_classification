@@ -49,4 +49,4 @@ if __name__ == "__main__":
             return "Its a Dog"
         
 
-    app.run(port=12000, debug=True)
+    app.run(hostname='0.0.0.0')
