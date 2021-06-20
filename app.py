@@ -10,7 +10,7 @@ from tensorflow import keras
 
 
 application = app = Flask(__name__)
-UPLOAD_FOLDER = "/Users/KUSHAL GADIGE/Desktop/Project1/static"
+UPLOAD_FOLDER = "/root/image_classification/static"
 
 
 
@@ -49,4 +49,4 @@ if __name__ == "__main__":
             return "Its a Dog"
         
 
-    app.run(hostname='0.0.0.0')
+    app.run(hostname='0.0.0.0', port=8080)
