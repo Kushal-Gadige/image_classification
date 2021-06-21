@@ -4,3 +4,4 @@ git clone https://github.com/Kushal-Gadige/image_classification.git
 cd image_classification/
 pip3 install -r requirements.txt --no-cache-dir
 python3 app.py
+
