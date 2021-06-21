@@ -10,7 +10,7 @@ from tensorflow import keras
 
 
 application = app = Flask(__name__)
-UPLOAD_FOLDER = "/root/image_classification/static"
+UPLOAD_FOLDER = "/image_classification/static"
 
 
 
