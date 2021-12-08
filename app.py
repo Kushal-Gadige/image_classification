@@ -8,11 +8,8 @@ import tensorflow as tf
 from tensorflow import keras
 
 
-
 application = app = Flask(__name__)
-UPLOAD_FOLDER = "/image_classification/static"
-
-
+UPLOAD_FOLDER = "./static"
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -20,14 +17,10 @@ def upload_predict():
     if request.method == "POST":
         image_file = request.files["image"]
         if image_file:
-            image_location = os.path.join(
-                UPLOAD_FOLDER,
-                image_file.filename
-            )
+            image_location = os.path.join(UPLOAD_FOLDER,image_file.filename)
             image_file.save(image_location)
             pred = predict(image_location, model)
-            print(pred)
-            return render_template("index.html", prediction=pred, image_loc=image_file.filename)
+            return render_template("index.html", prediction=pred, image_loc=image_location)
     return render_template("index.html", prediction=0, image_loc=None)
 
 if __name__ == "__main__":
